@@ -1,13 +1,10 @@
 ---
 lang: zh-CN
-title: 页面的标题
-description: 页面的描述
 date: 2023-08-02
 category:
   - OI
 tag:
   - MODInt
-archive: true
 ---
 
 # 「泛型与 OI」modint

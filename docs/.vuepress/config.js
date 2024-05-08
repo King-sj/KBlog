@@ -2,6 +2,8 @@ import { blogPlugin } from '@vuepress/plugin-blog'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
+import markdownItKatex from "markdown-it-katex";
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -135,10 +137,37 @@ export default defineUserConfig({
       ],
       hotReload: true,
     }),
+    mdEnhancePlugin({
+      // 使用 KaTeX 启用 TeX 支持
+      // katex: true,
+      // 使用 mathjax 启用 TeX 支持
+      mathjax: true,
+    }),
   ],
 
   bundler: viteBundler({
     viteOptions: {},
     vuePluginOptions: {},
   }),
+  // extendsMarkdown: (md) => {
+  //   md.use(markdownItKatex);
+  // },
+  head: [
+    // something else ...
+    [
+        "link",
+        {
+            rel: "stylesheet",
+            href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css",
+        },
+    ],
+    [
+      "link",
+      {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css",
+      },
+    ]
+  ]
+
 })

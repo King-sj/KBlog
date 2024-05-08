@@ -1,13 +1,10 @@
 ---
 lang: zh-CN
-title: 页面的标题
-description: 页面的描述
 date: 2023-07-09
 category:
   - 数学
 tag:
   - 公理系统
-archive: true
 ---
 
 # 「算术公理系统 1」自然数
@@ -519,7 +516,7 @@ $$a\times\operatorname{suc}(c)=(b+m)\times\operatorname{suc}(c)=b\times\operator
 2. 所有点的出度为 $1$，即 $\operatorname{outDeg}(v)=1$；
 3. 点 $0$ 入度为 $0$，即 $\operatorname{inDeg}(v_0)=0$；
 4. 任意点的入度小于等于 $1$，即 $\operatorname{inDeg}(v)\leq 1$；
-5. 存在从 $0$ 到任意点的路径，即 $\exist\operatorname{path}(0,v)$。
+5. 存在从 $0$ 到任意点的路径，即 $\exists\operatorname{path}(0,v)$。
 
 下面我们试着通过**删除公理**的方法来寻找反例。
 
