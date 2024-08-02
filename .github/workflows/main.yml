@@ -24,7 +24,9 @@ jobs:
 
       - name: Build
         run: npm run docs:build
-
+      - name: output result
+        run:
+          ls -a
       - name: Deploy to Server
         uses: appleboy/scp-action@master
         with:
@@ -32,5 +34,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ env.SSH_PORT }}
-          source: ".vuepress/dist/*"
+          source: "./blog/.vuepress/dist/*"
           target: "~/vuepress"
