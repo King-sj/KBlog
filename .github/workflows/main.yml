@@ -35,4 +35,4 @@ jobs:
           privateKey : ${{ secrets.SSH_KEY }}
           port: ${{ env.SSH_PORT }}
           local: "blog/.vuepress/dist"
-          remote: "~/vuepress"
+          remote: "/home/ubuntu/vuepress"
