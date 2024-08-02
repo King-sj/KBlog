@@ -27,9 +27,6 @@ jobs:
       - name: output result
         run: |
           ls -a
-          ls blog
-          ls blog/.vuepress
-          ls blog/.vuepress/dist
       - name: Deploy to Server
         uses: garygrossgarten/github-action-scp@release
         with:
@@ -37,5 +34,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           privateKey : ${{ secrets.SSH_KEY }}
           port: ${{ env.SSH_PORT }}
-          local: "./blog/.vuepress/dist/*"
+          local: "blog/.vuepress/dist"
           remote: "~/vuepress"
