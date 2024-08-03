@@ -35,4 +35,5 @@ jobs:
           port: ${{ env.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: blog/.vuepress/dist/*
-          target: /home/ubuntu/vuepress/
+          target: /home/ubuntu/vuepress/dist/
+          overwrite: true
