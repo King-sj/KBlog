@@ -1,7 +1,10 @@
 
 # github Actions
-(官网)[https://github.com/features/actions]
+[homepage](https://github.com/features/actions)
 
 # jenkins
-(官网)[https://www.jenkins.io/zh]
+[homepage](https://www.jenkins.io/zh)
+* how to start
+```sh
 java -jar jenkins.war --httpPort=8081 --enable-future-java
+``

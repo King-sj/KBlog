@@ -1,11 +1,5 @@
----
-marp: true
-theme: gaia
-size: 4:3
----
-
-
 # Slidev
+
 复杂演示推荐
 ## 缺点
 不支持导出pptx

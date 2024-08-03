@@ -1,19 +1,18 @@
 ---
-title: gradle
 date: 2024-08-02
 categories:
   - build-tools
 ---
 
-**国内镜像**
-https://mirrors.cloud.tencent.com/gradle/
+# gradle
+
+[国内镜像](https://mirrors.cloud.tencent.com/gradle/)
 
 Android Studio下载gradle太慢可换源
 
-android.plugin version 下载错误
-https://blog.csdn.net/qq_43811536/article/details/139447518
+[android.plugin version 下载错误查看](https://blog.csdn.net/qq_43811536/article/details/139447518)
 
-# settings.gradle.kts
+**修改 settings.gradle.kts**
 ```
 pluginManagement {
     repositories {
@@ -45,8 +44,8 @@ dependencyResolutionManagement {
 }
 ```
 
-# gradle-wrapper.properties
-换成对应的版本
+**gradle-wrapper.properties
+换成对应的版本**
 ```
 distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.7-all.zip
 ```

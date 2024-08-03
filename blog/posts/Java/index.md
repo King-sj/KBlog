@@ -1,3 +1,3 @@
+# Java 的 sdk manager
 
-sdkman 使用
-https://sdkman.io/usage
+[sdkman](https://sdkman.io/usage)

@@ -8,7 +8,7 @@ tag:
 
 # Github Actions
 
-本地调试工具 (act)[https://github.com/nektos/act]\
+本地调试工具 [act](https://github.com/nektos/act)
 
 需要创建配置文件
 ![alt text](image-1.png)

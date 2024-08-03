@@ -1,4 +1,6 @@
-https://ionic.nodejs.cn/vue/your-first-app/deploying-mobile
+# tips
+
+[deploy](https://ionic.nodejs.cn/vue/your-first-app/deploying-mobile)
 
 每次执行更新你的 Web 目录的构建（例如 ionic build）时（默认：build)，你需要将这些更改复制到你的原生项目中：
 
