@@ -37,3 +37,5 @@ jobs:
           source: blog/.vuepress/dist/*
           target: /home/ubuntu/vuepress/dist/
           overwrite: true
+          rm: true
+          strip_components: 3
