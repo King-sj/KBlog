@@ -8,6 +8,7 @@ export default sidebar({
       icon: "book",
       prefix: "posts/",
       children: "structure",
+      collapsible: true,
     },
     "intro",
     {
@@ -15,6 +16,7 @@ export default sidebar({
       icon: "book",
       prefix: "classBook/",
       children: "structure",
+      collapsible: true,
     },
   ],
 });
