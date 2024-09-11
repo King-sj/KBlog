@@ -1,7 +1,9 @@
 ---
 name: "Bug report \U0001F41E"
 about: Create a bug report
+title: ''
 labels: bug
+assignees: ''
 
 ---
 
