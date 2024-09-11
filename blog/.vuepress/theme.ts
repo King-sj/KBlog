@@ -13,7 +13,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.svg",
 
   repo: "https://github.com/King-sj/KBlog",
 
@@ -31,7 +31,7 @@ export default hopeTheme({
   copyright: "MPL-2.0 许可证",
   // 博客相关
   blog: {
-    description: "一个全栈开发者",
+    description: "一位热衷于探索全栈开发领域的技术爱好者，擅长将前端与后端技术无缝结合，致力于打造高效、优雅的解决方案。",
     intro: "/intro.html",
     medias: {
       Email: "mailto:info@example.com",
