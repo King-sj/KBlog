@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { MR_HOPE_AVATAR } from "./logo.js";
+// import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
   hostname: "https://github.com/King-sj",
@@ -28,7 +28,7 @@ export default hopeTheme({
   // 页脚
   footer: "<a href='https://beian.miit.gov.cn'>黔ICP备2024025117号-1</a> | 版权所有 © 2024-至今 KSJ ",
   displayFooter: true,
-  copyright:"MPL-2.0 许可证",
+  copyright: "MPL-2.0 许可证",
   // 博客相关
   blog: {
     description: "一个全栈开发者",
@@ -57,21 +57,40 @@ export default hopeTheme({
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
-    searchPro:{
-      indexContent:true,
-      filter : (page) =>{
+    searchPro: {
+      indexContent: true,
+      filter: (page) => {
         return true
         // TODO(SJ) 一下代码会报错
-        if(page.path == null)return true
+        if (page.path == null) return true
         return !page.path.startsWith('/encrypt');
       },
     },
-    // 启用之前需安装 @waline/client
-    // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
-    // comment: {
-    //   provider: "Waline",
-    //   serverURL: "https://waline-comment.vuejs.press",
-    // },
+    comment: {
+      provider: 'Giscus', // Artalk | Giscus | Waline | Twikoo
+      repo: "King-sj/KBlog",
+      repoId: "R_kgDOL41Gpw",
+      category: "Q&A",
+      categoryId: "DIC_kwDOL41Gp84CiYFP",
+      lazyLoading: true,
+      // <script src="https://giscus.app/client.js"
+      // data - repo="King-sj/KBlog"
+      // data - repo - id="R_kgDOL41Gpw"
+      // data - category="Q&A"
+      // data - category - id="DIC_kwDOL41Gp84CiYFP"
+      // data - mapping="pathname"
+      // data - strict="0"
+      // data - reactions - enabled="1"
+      // data - emit - metadata="0"
+      // data - input - position="top"
+      // data - theme="preferred_color_scheme"
+      // data - lang="zh-CN"
+      // data - loading="lazy"
+      // crossorigin = "anonymous"
+      // async >
+      //   </script>
+
+    },
 
     components: {
       components: ["Badge", "VPCard"],

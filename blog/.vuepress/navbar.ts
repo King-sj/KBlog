@@ -2,6 +2,10 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/encrypt/",
   "/posts/",
+  {
+    text: "课文",
+    link: "/classBook/",
+  },
+  "/encrypt/",
 ]);

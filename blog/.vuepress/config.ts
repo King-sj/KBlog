@@ -1,4 +1,5 @@
 import { defineUserConfig } from "vuepress";
+import { commentPlugin } from '@vuepress/plugin-comment'
 // import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme.js";
 
@@ -9,8 +10,9 @@ export default defineUserConfig({
   description: "KSJ 的博客",
   port: 8083,
   theme,
-  plugins:[
+  plugins: [
   ]
   // 和 PWA 一起启用
   // shouldPrefetch: false,
 });
+

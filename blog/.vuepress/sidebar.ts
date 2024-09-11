@@ -10,5 +10,11 @@ export default sidebar({
       children: "structure",
     },
     "intro",
+    {
+      text: "课文",
+      icon: "book",
+      prefix: "classBook/",
+      children: "structure",
+    },
   ],
 });
