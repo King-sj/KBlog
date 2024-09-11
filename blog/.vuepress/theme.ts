@@ -34,7 +34,7 @@ export default hopeTheme({
     description: "一位热衷于探索全栈开发领域的技术爱好者，擅长将前端与后端技术无缝结合，致力于打造高效、优雅的解决方案。",
     intro: "/intro.html",
     medias: {
-      Email: "mailto:info@example.com",
+      Email: "2175616761@qq.com",
       GitHub: "https://github.com/King-sj",
     },
   },
