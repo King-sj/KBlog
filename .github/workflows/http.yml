@@ -1,0 +1,14 @@
+name: Workflow for checking http status codes
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check http status code of production site
+      uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["http://bupt.online", "https://bupt.online", "http://www.bupt.online" ,"https://www.bupt.online"]'
+        expected: '[301, 200]'
+
