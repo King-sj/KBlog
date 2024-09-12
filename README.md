@@ -96,7 +96,7 @@ The primary goal of this blog is to bridge the gap between complex ideas and pra
 ### Built With
 
 * [![Vue][Vue.js]][Vue-url]
-* [VuePress](vuepress-url)
+* [VuePress][vuepress-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -213,7 +213,7 @@ Project Link: [https://github.com/King-sj/KBlog](https://github.com/King-sj/KBlo
 [issues-shield]: https://img.shields.io/github/issues/King-sj/KBlog.svg?style=for-the-badge
 [issues-url]: https://github.com/King-sj/KBlog/issues
 [license-shield]: https://img.shields.io/github/license/King-sj/KBlog.svg?style=for-the-badge
-[license-url]: https://github.com/King-sj/KBlog/blob/master/LICENSE.txt
+[license-url]: https://github.com/King-sj/KBlog/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
