@@ -5,10 +5,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress-vite build blog",
-    "docs:clean-dev": "vuepress-vite dev blog --clean-cache",
-    "docs:dev": "vuepress-vite dev blog",
-    "docs:update-package": "npx vp-update"
+    "blog:build": "vuepress-vite build blog",
+    "blog:clean-dev": "vuepress-vite dev blog --clean-cache",
+    "blog:dev": "vuepress-vite dev blog",
+    "blog:update-package": "npx vp-update"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.9",
@@ -23,6 +23,7 @@
     "vuepress-theme-hope": "2.0.0-rc.38"
   },
   "dependencies": {
-    "markdown-it-katex": "^2.0.3"
+    "markdown-it-katex": "^2.0.3",
+    "vuepress-plugin-oh-my-live2d": "^0.19.3"
   }
 }

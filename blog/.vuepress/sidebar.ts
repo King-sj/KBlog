@@ -3,20 +3,28 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     "",
-    {
-      text: "文章",
-      icon: "book",
-      prefix: "posts/",
-      children: "structure",
-      collapsible: true,
-    },
     "intro",
+  ],
+  "/tech/":[
     {
-      text: "课文",
-      icon: "book",
-      prefix: "classBook/",
-      children: "structure",
+      text: "技术",
+      children:"structure",
       collapsible: true,
+    }
+  ],
+  "/essay/":[
+    {
+      text:"随笔",
+      children:"structure",
+      collapsible:true,
     },
+  ],
+  "/tutorials/":[
+    {
+      text: "教程",
+      children:"structure",
+      icon: "book",
+      collapsible:true,
+    }
   ],
 });

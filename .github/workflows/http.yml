@@ -10,5 +10,5 @@ jobs:
       uses: lakuapik/gh-actions-http-status@v1
       with:
         sites: '["http://bupt.online", "https://bupt.online", "http://www.bupt.online" ,"https://www.bupt.online"]'
-        expected: '[200,200,200,200]'
+        expected: '[301,200,301,200]'
 

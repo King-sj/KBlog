@@ -1,5 +1,22 @@
 {
   "files.associations": {
     "random": "cpp"
-  }
+  },
+  "cSpell.ignoreWords": [
+    "bupt"
+  ],
+  "cSpell.words": [
+    "fullchain",
+    "installcert",
+    "keepalive",
+    "keyfile",
+    "letsencrypt",
+    "nopush",
+    "privkey",
+    "referer",
+    "reloadcmd",
+    "sendfile",
+    "vuepress",
+    "webnet"
+  ]
 }

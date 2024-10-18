@@ -23,7 +23,7 @@ jobs:
         run: npm i
 
       - name: Build
-        run: npm run docs:build
+        run: npm run blog:build
       - name: output result
         run: |
           ls -a blog/.vuepress/dist/
@@ -35,7 +35,7 @@ jobs:
           port: ${{ env.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: blog/.vuepress/dist/*
-          target: /home/ubuntu/vuepress/dist/
+          target: /home/ubuntu/project/Automaton/
           overwrite: true
           rm: true
           strip_components: 3

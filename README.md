@@ -121,7 +121,7 @@ The primary goal of this blog is to bridge the gap between complex ideas and pra
    ```
 3. run
    ```sh
-   npm run docs:dev
+   npm run blog:dev
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

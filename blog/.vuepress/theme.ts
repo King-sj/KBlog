@@ -34,15 +34,16 @@ export default hopeTheme({
     description: "一位热衷于探索全栈开发领域的技术爱好者，擅长将前端与后端技术无缝结合，致力于打造高效、优雅的解决方案。",
     intro: "/intro.html",
     medias: {
-      Email: "2175616761@qq.com",
+      Email: "mailto:2175616761@qq.com",
       GitHub: "https://github.com/King-sj",
+      QQ: "https://wpa.qq.com/msgrd?v=3&uin=2175616761&site=qq&menu=yes",
     },
   },
 
   // 加密配置
   encrypt: {
     config: {
-      "/encrypt/": ["1234"],
+      "/encrypt/": ["12345678"],
     },
   },
 
@@ -108,6 +109,7 @@ export default hopeTheme({
       imgSize: true,
       include: true,
       mark: true,
+      hint: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -164,6 +166,7 @@ export default hopeTheme({
 
       // install sandpack-vue3 before enabling it
       // sandpack: true,
+
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
@@ -222,5 +225,10 @@ export default hopeTheme({
     //     ],
     //   },
     // },
+    git:{
+      updatedTime: true,
+      createdTime: true,
+      contributors: true,
+    },
   },
 });

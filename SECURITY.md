@@ -12,8 +12,9 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it through the following methods:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- Send an email to [2175616761@qq.com](mailto:2175616761@qq.com)
+- Create an issue on [GitHub Issues](https://github.com/King-sj/KBlog/issues)
+
+We will respond within a week of receiving the report and will release a fix as soon as possible if the vulnerability is confirmed.
