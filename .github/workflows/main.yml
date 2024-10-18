@@ -35,7 +35,7 @@ jobs:
           port: ${{ env.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: blog/.vuepress/dist/*
-          target: /home/ubuntu/project/Automaton/
+          target: /home/ubuntu/project/blog/
           overwrite: true
           rm: true
           strip_components: 3
