@@ -2,7 +2,7 @@
 home: true
 layout: BlogHome
 icon: home
-title: home
+title: 主页
 author: King-sj
 # heroImage: /logo.png
 heroText: KSJ

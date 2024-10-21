@@ -5,6 +5,7 @@ category:
 tag:
   - 设计模式
   - typescript
+prev:
 next: ./DesignPrinciples
 ---
 

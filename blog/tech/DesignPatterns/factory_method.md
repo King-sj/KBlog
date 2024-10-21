@@ -8,7 +8,7 @@ tag:
   - 工厂方法
   - 交给子类
 prev: ./template_method
-next:
+next: ./singleton
 ---
 
 [[toc]]

@@ -6,5 +6,18 @@ export default navbar([
   "/essays/",
   "/projects/",
   "/tutorials/",
-  "/resources/"
+  "/resources/",
+  {
+    text: '友链',
+    children: [
+      {
+        text: 'KSJ-Blog',
+        link: 'https://bupt.online',
+      },
+      {
+        text: 'KSJ-Blog-GitHub',
+        link: 'https://king-sj.github.io',
+      },
+    ],
+  },
 ]);
