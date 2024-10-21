@@ -1,6 +1,9 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
+import { getDirname, path } from "vuepress/utils";
+
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   base: "/",
@@ -22,6 +25,16 @@ export default defineUserConfig({
         }
       ]
     })
-  ]
+  ],
+  alias: {
+    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
+      __dirname,
+      "./components/BlogHero.vue",
+    ),
+    "@theme-hope/components/HomePage": path.resolve(
+      __dirname,
+      "./components/HomePage.vue",
+    ),
+  },
 });
 

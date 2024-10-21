@@ -1,16 +1,8 @@
 # [并发异步编程之争：协程(asyncio)到底需不需要加锁？(线程/协程安全/挂起/主动切换)Python3](https://segmentfault.com/a/1190000041568839)
 
-![头像](https://avatar-static.segmentfault.com/272/694/2726948578-60fd1deec0c0b_huge128)
-
-**刘悦的技术博客**
-
-[2022-03-18](https://segmentfault.com/a/1190000041568839/revision)
-
-阅读 6 分钟
-
-![头图](https://segmentfault.com/img/bVcYz7i?spec=cover)
-
 原文转载自「刘悦的技术博客」[https://v3u.cn/a_id_208](https://link.segmentfault.com/?enc=8btt3pfGP%2FRxuxLguNqhrg%3D%3D.f%2BWWJlm9AsMAbAJjJZT%2BOQBqYNXwZgTYGW7Jx9l%2BpxQ%3D)
+
+<!-- more -->
 
 协程与线程向来焦孟不离，但事实上是，线程更被我们所熟知，在Python编程领域，单核同时间内只能有一个线程运行，这并不是什么缺陷，这实际上是符合客观逻辑的，单核处理器本来就没法同时处理两件事情，要同时进行多件事情本来就需要正在运行的让出处理器，然后才能去处理另一件事情，左手画方右手画圆在现实中本来就不成立，只不过这个让出的过程是线程调度器主动抢占的。
 

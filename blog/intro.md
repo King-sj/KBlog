@@ -2,6 +2,9 @@
 icon: circle-info
 archive: true
 sticky : true
+home: true
+portfolio: true
+titles: student
 ---
 
 # 介绍页

@@ -231,4 +231,6 @@ export default hopeTheme({
       contributors: true,
     },
   },
+},{
+  custom:true
 });
