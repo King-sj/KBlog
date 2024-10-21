@@ -27,4 +27,12 @@ export default sidebar({
       collapsible:true,
     }
   ],
+  "/resources/":[
+    {
+      text: "资源",
+      children:"structure",
+      icon: "book",
+      collapsible:true,
+    }
+  ],
 });

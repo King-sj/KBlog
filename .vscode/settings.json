@@ -6,6 +6,7 @@
     "bupt"
   ],
   "cSpell.words": [
+    "enduml",
     "fullchain",
     "installcert",
     "keepalive",
@@ -16,6 +17,7 @@
     "referer",
     "reloadcmd",
     "sendfile",
+    "startuml",
     "vuepress",
     "webnet"
   ]

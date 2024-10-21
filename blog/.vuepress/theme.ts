@@ -11,7 +11,9 @@ export default hopeTheme({
     url: "https://github.com/King-sj",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: [
+    "fontawesome-with-brands",
+  ],
 
   logo: "/logo.svg",
 
@@ -150,7 +152,8 @@ export default hopeTheme({
       mathjax: true,
 
       // 在启用之前安装 mermaid
-      // mermaid: true,
+      mermaid: true,
+      plantuml: true,
 
       // playground: {
       //   presets: ["ts", "vue"],
