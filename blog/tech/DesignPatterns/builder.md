@@ -7,7 +7,7 @@ tag:
   - typescript
   - 生成实例
 prev: ./prototype
-next: false
+next: ./abstractFactory
 ---
 
 ## 为什么要使用 Builder 模式
