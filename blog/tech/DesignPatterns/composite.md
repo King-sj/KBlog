@@ -8,7 +8,7 @@ tag:
   - TypeScript
   - 容器与内容的一致性
 prev: ./strategy
-next: false
+next: ./decorator
 ---
 
 ## 使用此设计模式的理由
@@ -166,3 +166,8 @@ Making user entries...
 /root/usr/tomura/game.doc (400)
 /root/usr/tomura/junk.mail (500)
 ```
+
+## 相关的设计模式
++ Command 模式
++ Visitor 模式
++ Decorator 模式
