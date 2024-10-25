@@ -1,6 +1,7 @@
 ---
 layout: Layout
 title: 随笔
+date: 2024-10-18
 ---
 
 # 随笔

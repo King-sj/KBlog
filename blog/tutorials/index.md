@@ -2,6 +2,7 @@
 # layout: IndexLayout
 layout: Layout
 title: 教程
+date: 2024-10-18
 ---
 
 # 教程

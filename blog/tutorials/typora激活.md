@@ -1,5 +1,6 @@
 ---
 title: Typora激活教程
+date: 2024-10-21
 tags:
   - 激活
 ---

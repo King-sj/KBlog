@@ -1,6 +1,7 @@
 ---
 layout: Layout
 title: 技术
+date: 2024-10-18
 ---
 
 # 技术

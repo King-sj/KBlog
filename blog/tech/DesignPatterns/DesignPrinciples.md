@@ -1,5 +1,6 @@
 ---
 title: 设计模式七大原则
+date: 2024-10-21
 category:
   - 设计模式
 tag:

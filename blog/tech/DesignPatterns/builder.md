@@ -1,5 +1,6 @@
 ---
 title: builder 模式
+date: 2024-10-22
 category:
   - 设计模式
 tag:

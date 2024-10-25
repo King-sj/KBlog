@@ -228,11 +228,8 @@ export default hopeTheme({
     //     ],
     //   },
     // },
-    git:{
-      updatedTime: false,
-      createdTime: true,
-      contributors: true,
-    },
+    // git 在 github action 上不能正常工作
+    git:false,
   },
 },{
   custom:true
