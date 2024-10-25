@@ -8,7 +8,7 @@ tag:
   - 分开考虑
   - 整体的替换算法
 prev: ./bridge
-next: false
+next: ./composite
 ---
 
 ## 使用此设计模式的理由

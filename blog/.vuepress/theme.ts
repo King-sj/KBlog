@@ -229,7 +229,7 @@ export default hopeTheme({
     //   },
     // },
     git:{
-      updatedTime: true,
+      updatedTime: false,
       createdTime: true,
       contributors: true,
     },
