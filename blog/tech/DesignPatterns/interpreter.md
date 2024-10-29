@@ -8,7 +8,7 @@ tag:
   - TypeScript
   - 用类实现
 prev: ./command
-next: false
+next: ./end
 ---
 
 
