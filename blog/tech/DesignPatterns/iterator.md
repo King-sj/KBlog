@@ -10,7 +10,7 @@ prev: ./DesignPrinciples
 next: ./adapter
 ---
 
-[[toc]]
+
 
 ## 为什么要使用迭代器模式
 

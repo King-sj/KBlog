@@ -12,7 +12,7 @@ prev: ./template_method
 next: ./singleton
 ---
 
-[[toc]]
+
 
 在 Factory Method 模式中，我们定义一个用于创建对象的接口，但由子类决定要实例化的类是哪一个。Factory Method 使一个类的实例化延迟到其子类。
 <!-- more -->

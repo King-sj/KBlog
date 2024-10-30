@@ -10,7 +10,7 @@ prev: ./iterator
 next: ./template_method
 ---
 
-[[toc]]
+
 
 ## 适配器模式
 

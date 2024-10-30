@@ -8,7 +8,7 @@ tag:
 star: true
 ---
 
-[[toc]]
+
 
 # docker + nginx + acme.sh 部署 vue/flask 项目
 
@@ -276,11 +276,10 @@ docker-compose up -d --build
 
 ## 配置nginx反向代理，使flask支持 https
 
+[Flask 部署](https://www.runoob.com/flask/flask-deployment.html)
+
 #TODO - 添加flask+nginx配置
 
-# 改进方向
-
-[ ] 将卷的挂载目录改为由命令输入，而不是硬编码
 
 ## 参考资料
 
