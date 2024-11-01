@@ -7,57 +7,35 @@ categories:
   - docker
 ---
 
+## GitHub Container Registry 加速
 
-
-# docker in wsl
-
-转载自：[docker wsl2 踩坑记录 | 唯独你没懂，居然把路径藏在这里](https://blog.csdn.net/Tighway/article/details/111304261)
-
-## docker wsl2 踩坑记录 | 唯独你没懂，居然把路径藏在这里
-
-最新推荐文章于 2024-06-30 17:39:23 发布
-
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/original.png)
-
-[TieWay59](https://blog.csdn.net/Tighway "TieWay59") ![](https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png) 最新推荐文章于 2024-06-30 17:39:23 发布
-
-版权声明：本文为博主原创文章，遵循 [CC 4.0 BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) 版权协议，转载请附上原文出处链接和本声明。
-
-## docker wsl2 踩坑记录
-
-### docker-desktop 是什么
-
-> [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
->
-> [What is the docker-desktop-data distro](https://stackoverflow.com/questions/61396989/what-is-the-docker-desktop-data-distro-used-for-when-running-docker-desktop-with)
-
-简单地说，使用 docker-desktop-wsl 方式使用 docker，会给你创建两个 wsl distro。一个包含 docker/docker-desktop 服务本体，一个用于存储附属的数据（比如 images 等）。
-
-> 这中间就会导致 docker 文件的实际位置很奇怪，我还没有研究透。
-
-官方推荐的 win10 下的实践是：你的用 docker-desktop 设置把你主机 docker 集成到某个 distro(wsl 可以使用的 linux 发行版，我的是 Ubuntu)。然后在 win10 的开发环境去 remote 连接你的 Ubuntu。
-
-这样你就能用 win10 的图形界面，在 linux 的环境下，进行包含 docker 的开发过程了。
-
-### wsl 里的 docker 到底在哪里
-
-> [Docker volumes on Windows WSL2](https://stackoverflow.com/questions/63552052/docker-volumes-on-windows-wsl2)
->
-> [Locating data volumes in Docker Desktop (Windows)](https://stackoverflow.com/questions/43181654/locating-data-volumes-in-docker-desktop-windows/64418064#64418064)
->
-> More generally `/var/lib/docker/` maps to `\\wsl$\docker-desktop-data\version-pack-data\community\docker\`.
-
-简单地说，打开 win10 文件管理器，输入：
-
-```url
-\\wsl$\docker-desktop-data\version-pack-data\community\docker\
+### ghcr.io简介
++ ghcr.io 是 GitHub Container Registry 的域名。GitHub Container Registry 是 GitHub 提供的容器镜像注册表服务，允许开发者在 GitHub 上存储、管理和分享 Docker 镜像。它与 GitHub 代码仓库紧密集成，可以使用相同的权限管理、团队协作和版本控制工具来管理容器镜像。
++ 通过 GitHub Container Registry，开发者可以方便地将他们的容器镜像与代码仓库关联起来，这样就可以在同一个平台上管理代码和镜像。这种集成性使得持续集成/持续交付 (CI/CD) 流程更加简化和统一，开发团队可以更容易地构建、测试和部署应用程序。
++ 对于使用 GitHub 作为代码托管平台的开发者来说，GitHub Container Registry 提供一个便捷且强大的容器镜像管理解决方案。通过该服务，可以更轻松地构建和部署容器化的应用程序，从而加速开发和交付周期。
+### 镜像地址
+https://ghcr.nju.edu.cn
+### 配置方法
+```sh
+sudo vim /etc/docker/daemon.json
+```
+```json
+{
+  "registry-mirrors": ["https://ghcr.nju.edu.cn"]
+}
+```
+**:wq**保存退出
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+拉取镜像方法
+```sh
+docker pull ghcr.nju.edu.cn/open-webui/open-webui:main
 ```
 
-去 inspect 得到的`/var/lib/docker/...`都是在这个路径下的。
+## docker wsl2 容器目录
 
-
-# 修改docker ip 绑定参考
-
-https://www.cnblogs.com/kingsonfu/p/11578073.html
-
-文件目录：```\\wsl$\docker-desktop-data\data\docker\containers```
+```
+\\wsl$\docker-desktop-data\data\docker\containers
+```
