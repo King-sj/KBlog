@@ -8,3 +8,5 @@ blog/.vuepress/dist/
 .env
 .vars
 .secrets
+temp
+tmp
