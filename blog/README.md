@@ -16,6 +16,10 @@ projects:
     name: 自动机
     desc: 自动机
     link: https://Automaton.bupt.online
+  - icon: project
+    name: 智能车循迹
+    desc: 北京邮电大学创新创业智能车循迹python版
+    link: https://github.com/king-sj/carrobot
 ---
 
 <!-- https://theme-hope.vuejs.press/zh/guide/ -->
