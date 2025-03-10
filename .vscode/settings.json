@@ -19,8 +19,11 @@
     "referer",
     "reloadcmd",
     "sendfile",
+    "smallpt",
     "startuml",
+    "stdlib",
     "vuepress",
-    "webnet"
+    "webnet",
+    "yyds"
   ]
 }

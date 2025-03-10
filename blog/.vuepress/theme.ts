@@ -28,7 +28,9 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "<a href='https://beian.miit.gov.cn'>黔ICP备2024025117号-1</a> | 版权所有 © 2024-至今 KSJ ",
+  footer: `
+    <a href="https://beian.miit.gov.cn">黔ICP备2024025117号-1</a> | 版权所有 © 2024-至今 KSJ
+  `,
   displayFooter: true,
   copyright: "MPL-2.0 许可证",
   // 博客相关

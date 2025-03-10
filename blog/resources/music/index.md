@@ -1,0 +1,4 @@
+- [LLMS - 一款免费的、开源的、跨平台的数字音频工作站，它可以帮助你用电脑制作音乐](https://lmms.io/)
+- [Audacity - 一款免费的开源音频编辑器和录音工具](https://www.audacityteam.org/post-download/)
+- [袅袅虚拟歌手 - AISingers专用曲谱制作软件](http://www.aisingers.com/ai/editor/)
+- [midi 素材](https://www.bilibili.com/opus/372436199292074229)
