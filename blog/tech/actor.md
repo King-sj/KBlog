@@ -56,3 +56,15 @@ Rust 生态中有如 Actix、riker 等高性能 Actor 框架，适合构建高�
 ---
 
 Actor 模型已成为现代分布式系统和高并发服务的重要基础，适合对高可用、可扩展性有极高要求的场景。
+# actor 并发模型
+
+## 并发模型
+- 多线程
+- 协程/异步
+- actor
+
+## 理论
+https://zhuanlan.zhihu.com/p/86460724
+
+## Rust 中 Actor 并发模型的实践与使用
+https://blog.csdn.net/smilejiasmile/article/details/138037188

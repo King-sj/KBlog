@@ -158,3 +158,117 @@ async def listen_for_input():
 4. `main()`：这是主函数，它初始化任务列表并启动 `listen_for_input` 任务。它会持续运行事件循环，直到 `stop_event` 被设置，然后等待所有任务完成并打印总运行时间。
 
 通过这个示例，我们可以看到 `asyncio` 如何帮助我们轻松地管理并发任务，并且可以动态地添加新的任务。
+
+## rust 版本
+```rust
+use std::sync::{
+  atomic::{AtomicBool, Ordering},
+  Arc,
+};
+use std::time::Instant;
+use tokio::{
+  io::{AsyncBufReadExt, BufReader},
+  sync::{Mutex, Notify},
+  task::JoinHandle,
+};
+
+// Application state structure
+struct AppState {
+  should_stop: Arc<AtomicBool>, // Atomic flag to signal stopping
+  tasks: Arc<Mutex<Vec<JoinHandle<()>>>>, // List of spawned tasks
+  notify: Arc<Notify>, // Notification mechanism
+}
+
+impl AppState {
+  // Constructor for AppState
+  fn new() -> Self {
+    Self {
+      should_stop: Arc::new(AtomicBool::new(false)),
+      tasks: Arc::new(Mutex::new(Vec::new())),
+      notify: Arc::new(Notify::new()),
+    }
+  }
+}
+
+// Task that increments a counter and prints it
+async fn counter_task(name: String, state: Arc<AppState>) {
+  let mut counter = 0;
+  loop {
+    // Check the atomic stop flag
+    if state.should_stop.load(Ordering::Relaxed) {
+      break;
+    }
+
+    println!("{} : {}", name, counter);
+    counter += 1;
+
+    // Use async sleep and notification
+    tokio::select! {
+      _ = tokio::time::sleep(std::time::Duration::from_secs(1)) => {}
+      _ = state.notify.notified() => {
+        if state.should_stop.load(Ordering::Relaxed) {
+          break;
+        }
+      }
+    }
+  }
+}
+
+// Function to listen for user input
+async fn listen_input(state: Arc<AppState>) -> tokio::io::Result<()> {
+  let mut reader = BufReader::new(tokio::io::stdin());
+  let mut line = String::new();
+
+  loop {
+    line.clear();
+    reader.read_line(&mut line).await?;
+    let input = line.trim();
+
+    if input.eq_ignore_ascii_case("stop") {
+      // Set the stop flag and notify all tasks
+      state.should_stop.store(true, Ordering::Relaxed);
+      state.notify.notify_waiters();
+      break;
+    } else {
+      // Spawn a new counter task
+      let task = tokio::spawn(counter_task(input.to_string(), state.clone()));
+      state.tasks.lock().await.push(task);
+    }
+  }
+
+  Ok(())
+}
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+  let start_time = Instant::now();
+  let state = Arc::new(AppState::new());
+
+  // Start listening for input
+  let _ = tokio::spawn(listen_input(state.clone()));
+
+  // Wait for the stop signal
+  while !state.should_stop.load(Ordering::Relaxed) {
+    tokio::time::sleep(std::time::Duration::from_millis(100)).await;
+  }
+
+  // Collect and abort all tasks
+  let mut tasks = state.tasks.lock().await.drain(..).collect::<Vec<_>>();
+  tasks.push(tokio::spawn(async {
+    if let Err(e) = listen_input(state).await {
+      eprintln!("Task failed: {}", e);
+    }
+  }));
+
+  for handle in tasks {
+    handle.abort();
+    let _ = handle.await;
+  }
+
+  println!(
+    "Total run time: {:.2} seconds",
+    start_time.elapsed().as_secs_f32()
+  );
+  Ok(())
+}
+```
