@@ -1,10 +1,7 @@
 ---
 title: AutoHotKey 入门与技巧
-categories:
-  - 自动化
-  - 脚本
-  - 效率工具
-  - Windows
+category: 自动化
+
 ---
 
 # AutoHotKey 简介

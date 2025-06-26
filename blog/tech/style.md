@@ -1,8 +1,8 @@
 ---
 title: 风格统一
 date: 2024-08-25 12:00:00
-tags: 风格
-categories: 风格
+tag: 风格
+category: 风格
 ---
 
 # 风格统一

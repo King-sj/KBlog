@@ -1,11 +1,6 @@
 ---
 title: GitHub SSH 连接被拒问题解决
-categories:
-  - Git
-  - SSH
-  - 踩坑
-  - Windows
-  - 网络
+category: Git
 ---
 
 # 坑：ssh: connect to host github.com port 22: Connection refused

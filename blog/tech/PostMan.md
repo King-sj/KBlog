@@ -1,11 +1,6 @@
 ---
 title: PostMan 使用细节与技巧
-categories:
-  - 接口测试
-  - 工具
-  - 前端
-  - 后端
-  - 实用技巧
+category: 接口测试
 ---
 
 # PostMan 使用细节

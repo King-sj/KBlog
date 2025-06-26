@@ -1,7 +1,7 @@
 ---
 title: CSRF（跨站请求伪造）
 date: 2025-06-26
-categories:
+category:
   - 安全
 ---
 # 跨站请求伪造（CSRF）

@@ -1,7 +1,7 @@
 ---
 title: android studio换源
 date: 2024-08-02
-categories:
+category:
   - build-tools
 ---
 

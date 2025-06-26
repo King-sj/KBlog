@@ -1,9 +1,7 @@
 ---
 date: 2024-09-12
-tags:
-  - docker
-categories:
-  - 奇技淫巧
+category: docker
+tag:
   - docker
 ---
 

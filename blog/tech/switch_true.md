@@ -1,8 +1,6 @@
 ---
 title: switch-true 编程模式
-categories:
-  - 编程范式
-  - 技巧
+category: 编程范式
 ---
 
 # switch-true 编程模式

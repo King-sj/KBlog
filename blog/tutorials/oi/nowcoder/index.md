@@ -1,8 +1,6 @@
 ---
 title: 牛客 OI 题库导航
-categories:
-  - OI
-  - 题库
+category: OI
 ---
 
 # 牛客 OI 题库导航

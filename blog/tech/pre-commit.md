@@ -1,11 +1,6 @@
 ---
 title: pre-commit 钩子工具简介与实用
-categories:
-  - 工具
-  - 代码质量
-  - 自动化
-  - Python
-  - Git
+category: 工具
 ---
 
 # pre-commit 简介

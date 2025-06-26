@@ -1,8 +1,6 @@
 ---
 title: LR 语法分析方法
-categories:
-  - 编译原理
-  - 语法分析
+category: 编译原理
 ---
 
 # LR 语法分析方法

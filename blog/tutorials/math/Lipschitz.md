@@ -1,8 +1,6 @@
 ---
 title: Lipschitz 连续
-categories:
-  - 数学
-  - 分析
+category: 数学
 ---
 
 # Lipschitz 连续

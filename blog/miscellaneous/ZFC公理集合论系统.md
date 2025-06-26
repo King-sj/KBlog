@@ -1,9 +1,7 @@
 ---
 title: ZFC公理集合论系统
-categories:
-  - 数学
-  - 逻辑
-  - 基础理论
+category:
+    - 数学
 ---
 
 # ZFC公理集合论系统

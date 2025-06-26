@@ -1,8 +1,7 @@
 ---
 title: 架构整洁之道
-categories:
-  - 读书笔记
-  - 架构
+category:
+    - 读书笔记
 ---
 
 # 架构整洁之道

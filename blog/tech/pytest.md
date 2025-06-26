@@ -1,8 +1,6 @@
 ---
 title: pytest 配置与实用技巧
-categories:
-  - 工具
-  - 测试
+category: 工具
 ---
 
 # pytest 配置与实用技巧

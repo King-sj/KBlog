@@ -1,9 +1,7 @@
 ---
 title: CORS（跨域资源共享）
 date: 2025-06-26
-categories:
-  - 前端
-  - 安全
+category: 前端
 ---
 
 # CORS（跨域资源共享）

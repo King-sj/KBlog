@@ -1,7 +1,7 @@
 ---
 title: XSS（跨站脚本攻击）
 date: 2025-06-26
-categories:
+category:
   - 安全
 ---
 

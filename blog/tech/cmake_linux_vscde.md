@@ -1,11 +1,7 @@
 ---
 title: CMake 在 Linux/VSCode 下的常见问题与解决
-categories:
-  - C++
-  - 构建工具
-  - VSCode
-  - Linux
-  - 踩坑
+category: C++
+
 ---
 
 # CMake 在 Linux/VSCode 下的常见问题与解决
