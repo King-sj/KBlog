@@ -2,8 +2,9 @@
 title: 架构整洁之道
 category:
     - 读书笔记
+prev: false
+next: ./序
 ---
-
 # 架构整洁之道
 
 > Clean Architecture
