@@ -19,6 +19,10 @@ export default navbar([
                 text: 'KSJ-Blog-GitHub',
                 link: 'https://king-sj.github.io',
             },
+            {
+                text: 'Agicy',
+                link: 'https://blog.agicy.cn/',
+            }
         ],
     },
 ]);
