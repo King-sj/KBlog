@@ -23,6 +23,7 @@
     "shiki-languages": "^0.2.7",
     "typescript": "latest",
     "vue": "^3.5.26",
+    "vue-router": "^4.6.4",
     "vuepress": "next",
     "vuepress-plugin-md-enhance": "^2.0.0-rc.38",
     "vuepress-theme-hope": "latest"
