@@ -1,5 +1,5 @@
 ---
-layout: Layout
+layout: CategoryLayout
 title: 资源
 date: 2024-10-18T00:00:00.000Z
 ---

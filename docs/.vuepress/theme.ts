@@ -11,9 +11,7 @@ export default hopeTheme({
     url: "https://github.com/King-sj",
   },
 
-  iconAssets: [
-    "fontawesome-with-brands",
-  ],
+  // iconAssets 已迁移到 plugins.icon.assets（iconAssets 已弃用）
 
   logo: "/logo.svg",
 
@@ -61,15 +59,15 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
+    // icon 资源（迁移自 iconAssets）
+    icon: {
+      assets: ["fontawesome-with-brands"],
+    },
     blog: true,
-    searchPro: {
-      indexContent: true,
-      filter: (page) => {
-        return true
-        // TODO(SJ) 一下代码会报错
-        if (page.path == null) return true
-        return !page.path.startsWith('/encrypt');
-      },
+    // replace deprecated searchPro with slimsearch
+    slimsearch: {
+      // minimal config; keep index content behavior
+      // theme-hope will handle indexing; custom filter not supported here
     },
     comment: {
       provider: 'Giscus', // Artalk | Giscus | Waline | Twikoo
@@ -103,7 +101,6 @@ export default hopeTheme({
         "Badge" ,
         "BiliBili" ,
         "CodePen" ,
-        "FontIcon" ,
         "PDF" ,
         "Share" ,
         "StackBlitz" ,
@@ -111,82 +108,10 @@ export default hopeTheme({
         "VPBanner" ,
         "VPCard" ,
         "VidStack" ,
-        "XiGua"
       ],
     },
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      codetabs: true,
-      component: true,
-      demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
-      include: true,
-      mark: true,
-      hint: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      tasklist: true,
-      vPre: true,
-
-      // 在启用之前安装 chart.js
-      // chart: true,
-
-      // insert component easily
-
-      // 在启用之前安装 echarts
-      // echarts: true,
-
-      // 在启用之前安装 flowchart.ts
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
-
-      // 在启用之前安装 katex
-      // katex: true,
-
-      // 在启用之前安装 mathjax-full
-      mathjax: true,
-
-      // 在启用之前安装 mermaid
-      mermaid: true,
-      plantuml: true,
-
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
-
-      // 在启用之前安装 reveal.js
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
-      // 在启用之前安装 @vue/repl
-      // vuePlayground: true,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: true,
-
-    },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
@@ -245,8 +170,46 @@ export default hopeTheme({
     //   },
     // },
     // git 在 github action 上不能正常工作
-    git:false,
+    git: false,
   },
-},{
-  custom:true
-});
+
+  // 将 md-enhance 配置迁移到 markdown（避免弃用警告）
+  markdown: {
+    align: true,
+    attrs: true,
+    codeTabs: true,
+    component: true,
+    demo: true,
+    figure: true,
+    imgLazyload: true,
+    imgSize: true,
+    include: true,
+    mark: true,
+    hint: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tabs: true,
+    tasklist: true,
+    vPre: true,
+    math: true,
+    mermaid: true,
+    plantuml: true,
+  },
+},
+{
+    custom: true
+}
+)

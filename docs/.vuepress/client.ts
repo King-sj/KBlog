@@ -1,10 +1,14 @@
 import { defineClientConfig } from 'vuepress/client'
-import IndexLayout from './layouts/IndexLayout.vue'
+import IndexLayout from './components/layouts/IndexLayout.vue'
+import CategoryLayout from './components/layouts/CategoryLayout.vue'
+import Blog from './components/BlogHero.vue'
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss"
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 export default defineClientConfig({
   layouts: {
-    IndexLayout
+    IndexLayout,
+    CategoryLayout,
+    Blog
   },
   setup() {
     // 影响 跳转道工信部备案 与 版权信息的跳转

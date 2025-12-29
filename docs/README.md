@@ -1,10 +1,10 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: home
 title: 主页
 author: King-sj
-# heroImage: /logo.png
+heroImage: /logo.png
 heroText: KSJ
 bgImage: /bg-2.png
 heroFullScreen: true

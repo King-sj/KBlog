@@ -19,19 +19,24 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install pnpm
+        run: npm i -g pnpm
+
       - name: Install dependencies
-        run: npm i
+        run: |
+          pnpm install
 
       - name: Build
-        run: npm run blog:build
+        run: pnpm run blog:build
+
       - name: output result
         run: |
-          ls -a blog/.vuepress/dist/
+          ls -a docs/.vuepress/dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN}}
-          publish_dir: blog/.vuepress/dist # 或者您项目构建输出的目录
+          publish_dir: docs/.vuepress/dist # 构建输出目录
           external_repository: King-sj/King-sj.github.io
           publish_branch: main

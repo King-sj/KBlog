@@ -4,13 +4,15 @@
 $gcd(a,b)=gcd(b,a\%b)$
 
 证明:
-$$
-设a=bq+r=bq+a\%b\\
-a\%b=a-bq\\
-设d=gcd(a,b),则\\
-d|a,d|b \rightarrow d| a\%b\\
-即d=(b,a\%b)
-$$
+
+设 $a=bq+r=bq+a\%b$，
+
+设 $a\%b=a-bq$，
+
+设 $d=\gcd(a,b)$，则 $d\mid a,\ d\mid b \rightarrow d\mid a\%b$，
+
+即 $d=(b,a\%b)$。
+
 得证
 
 代码
@@ -33,7 +35,7 @@ int gcd(a,b) {
 
 对比系数有$x_1=y_2,y_2=x_2-\frac{a}{b}y_2$
 
-注意到 a*x +  0*y=gcd(a,0)=a 得x=1,y=0
+注意到 $a\times x + 0\times y = \gcd(a,0)=a$，得 $x=1,\ y=0$。
 
 ```cpp
 void exgcd(a,b,int& x,int& y){
@@ -47,7 +49,7 @@ void exgcd(a,b,int& x,int& y){
 }
 ```
 
-若$\gcd(a,b)=1,b为质数,则x=a^{-1}(mod p)$
+若 $\gcd(a,b)=1$，且 $b$ 为质数，则 $x=a^{-1}\pmod p$。
 ## 费马小定理
 
 $a^{p-1}=1(mod p)$

@@ -19,14 +19,19 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install pnpm
+        run: npm i -g pnpm
+
       - name: Install dependencies
-        run: npm i
+        run: |
+          pnpm install
 
       - name: Build
-        run: npm run blog:build
+        run: |
+          pnpm run blog:build
       - name: output result
         run: |
-          ls -a blog/.vuepress/dist/
+          ls -a docs/.vuepress/dist/
       - name: copy file via ssh key
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -34,7 +39,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ env.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          source: blog/.vuepress/dist/*
+          source: docs/.vuepress/dist/*
           target: /home/ubuntu/project/blog/
           overwrite: true
           rm: false
