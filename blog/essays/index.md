@@ -8,6 +8,6 @@ date: 2024-10-18
 
 这里是所有个人感想、生活记录等非技术类文章。
 
-<BlogPosts :pages="$site.pages" :filter="page => page.path.startsWith('/essays/')" />
+<!-- <BlogPosts :pages="$site.pages" :filter="page => page.path.startsWith('/essays/')" /> -->
 
 <Catalog/>

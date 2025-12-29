@@ -13,13 +13,9 @@ tagline: Talking is cheap, show me your code.
 copyright: MIT 许可证
 projects:
   - icon: project
-    name: 自动机
-    desc: 自动机
-    link: https://Automaton.bupt.online
-  - icon: project
-    name: 智能车循迹
-    desc: 北京邮电大学创新创业智能车循迹python版
-    link: https://github.com/king-sj/carrobot
+    name: koroutine library
+    desc: A modern C++ coroutine library
+    link: https://docs.koroutine.bupt.online/
 ---
 
 <!-- https://theme-hope.vuejs.press/zh/guide/ -->

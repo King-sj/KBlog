@@ -1,3 +1,11 @@
+---
+category: functools
+tag:
+  - python
+  - decorators
+title: functools.wraps 使用详解
+---
+
 functools.wraps 是 Python 中的一个装饰器，用于装饰另一个装饰器，使其保留被装饰函数的元数据，如函数名、文档字符串等。这在编写装饰器时非常有用，因为装饰器会改变被装饰函数的属性，使得调试和文档生成变得困难。
 
 使用示例

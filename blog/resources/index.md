@@ -19,6 +19,4 @@ date: 2024-10-18T00:00:00.000Z
 
 - [占位图生成工具](https://dummyimage.com/)
 
-  <blogposts :pages="$site.pages" :filter="page => page.path.startsWith('/resources/')">
-  </blogposts>
 - [ApiFox —— API 设计、开发、测试一体化协作平台](https://apifox.com/#pricing)

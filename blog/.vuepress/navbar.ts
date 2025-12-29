@@ -8,21 +8,22 @@ export default navbar([
     "/reading-notes/",
     "/tutorials/",
     "/resources/",
-    {
-        text: '友链',
-        children: [
-            {
-                text: 'KSJ-Blog',
-                link: 'https://bupt.online',
-            },
-            {
-                text: 'KSJ-Blog-GitHub',
-                link: 'https://king-sj.github.io',
-            },
-            {
-                text: 'Agicy',
-                link: 'https://blog.agicy.cn/',
-            }
-        ],
-    },
+    "/friends/",
+    // {
+    //     text: '友链',
+    //     children: [
+    //         {
+    //             text: 'KSJ-Blog',
+    //             link: 'https://bupt.online',
+    //         },
+    //         {
+    //             text: 'KSJ-Blog-GitHub',
+    //             link: 'https://king-sj.github.io',
+    //         },
+    //         {
+    //             text: 'Agicy',
+    //             link: 'https://blog.agicy.cn/',
+    //         }
+    //     ],
+    // },
 ]);
