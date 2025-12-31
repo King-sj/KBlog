@@ -1,0 +1,52 @@
+name: 部署文档
+
+on:
+  push:
+    branches:
+    - master
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        # 如果你文档需要 Git 子模块，取消注释下一行
+        # submodules: true
+
+    - name: 设置 pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: 设置 Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: pnpm
+
+    - name: 安装依赖
+      run: |
+        corepack enable
+        pnpm install --frozen-lockfile
+
+    - name: 构建文档
+      env:
+        NODE_OPTIONS: --max_old_space_size=8192
+      run: |-
+        pnpm run docs:build
+        > src/.vuepress/dist/.nojekyll
+
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@7.0.2
+      with:
+        switches: -avzr --delete
+        path: "src/.vuepress/dist/"
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_port: ${{ secrets.DEPLOY_PORT }}
+        remote_user: ${{ secrets.DEPLOY_USER }}
+        remote_key: ${{ secrets.DEPLOY_KEY }}
