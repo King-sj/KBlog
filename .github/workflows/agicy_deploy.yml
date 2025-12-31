@@ -35,7 +35,10 @@ jobs:
         NODE_OPTIONS: --max_old_space_size=8192
       run: |-
         pnpm run blog:build
-        > src/.vuepress/dist/.nojekyll
+
+    - name: output result
+      run: |
+        ls -a docs/.vuepress/dist/
 
     - name: rsync deployments
       uses: burnett01/rsync-deployments@7.0.2
