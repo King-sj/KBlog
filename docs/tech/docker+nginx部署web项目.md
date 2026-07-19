@@ -3,7 +3,7 @@ author: King-sj
 date: 2024-09-16
 category:
   - nginx
-tag:
+tags:
   - 部署
 star: true
 ---

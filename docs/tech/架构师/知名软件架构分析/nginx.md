@@ -1,3 +1,10 @@
+---
+title: Nginx 架构设计
+date: 2025-03-01
+category: ["架构"]
+tags: ["Nginx", "高并发", "epoll", "架构设计"]
+---
+
 # Nginx 架构设计
 
 【Nginx是什么？Nginx高并发架构拆解指南-哔哩哔哩】 https://b23.tv/5TP2kfG

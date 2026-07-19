@@ -1,8 +1,15 @@
-# github 工作流程
+---
+title: GitHub 工作流
+date: 2024-07-01
+category: ["Git"]
+tags: ["git", "GitHub", "工作流", "开源"]
+---
 
-[十分钟学会正确的github工作流，和开源作者们使用同一套流程](https://www.bilibili.com/video/BV19e4y1q7JJ)
+# GitHub 工作流
 
-![alt text](思维导图.png)
+[十分钟学会正确的 GitHub 工作流，和开源作者们使用同一套流程](https://www.bilibili.com/video/BV19e4y1q7JJ)
+
+![GitHub 工作流思维导图](思维导图.png)
 
 --------------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 ---
 title: 风格统一
 date: 2024-08-25 12:00:00
-tag: 风格
+tags: 风格
 category: 风格
 ---
 

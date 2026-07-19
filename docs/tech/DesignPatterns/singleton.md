@@ -3,7 +3,7 @@ title: Singleton 模式
 date: 2024-10-21
 category:
   - 设计模式
-tag:
+tags:
   - 设计模式
   - typescript
   - 生成实例

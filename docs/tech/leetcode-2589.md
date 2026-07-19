@@ -1,4 +1,11 @@
-# leetcode 2589
+---
+title: LeetCode 2589 题解
+date: 2025-03-01
+category: ["算法"]
+tags: ["LeetCode", "差分约束", "SPFA", "前缀和"]
+---
+
+# LeetCode 2589
 
 ## 题解
 

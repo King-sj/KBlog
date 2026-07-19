@@ -3,7 +3,7 @@ title: 抽象工厂模式
 date: 2024-10-25
 category:
   - 设计模式
-tag:
+tags:
   - 设计模式
   - typescript
   - 生成实例

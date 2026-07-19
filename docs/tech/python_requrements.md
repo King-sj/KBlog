@@ -2,7 +2,7 @@
 title: python requirements.txt
 date: 2024-10-29
 category: python
-tag:
+tags:
   - 踩坑记录
 ---
 

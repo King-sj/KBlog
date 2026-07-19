@@ -1,4 +1,12 @@
-# [并发异步编程之争：协程(asyncio)到底需不需要加锁？(线程/协程安全/挂起/主动切换)Python3](https://segmentfault.com/a/1190000041568839)
+---
+title: 协程(asyncio)到底需不需要加锁？
+date: 2024-06-01
+category: ["Python"]
+tags: ["python", "asyncio", "协程", "线程安全", "并发"]
+summary: 探讨 Python 协程与线程在并发编程中的安全性差异，分析协程在什么情况下需要加锁。
+---
+
+# 协程(asyncio)到底需不需要加锁？
 
 原文转载自「刘悦的技术博客」[https://v3u.cn/a_id_208](https://link.segmentfault.com/?enc=8btt3pfGP%2FRxuxLguNqhrg%3D%3D.f%2BWWJlm9AsMAbAJjJZT%2BOQBqYNXwZgTYGW7Jx9l%2BpxQ%3D)
 
@@ -12,7 +20,7 @@
 
 但其实，这并不是事情的全貌，就算只能用单核处理任务，多个线程之前也并不是完全独立的，它们会操作同一个资源。于是，大家又发明了同步锁，使得一段时间内只有一个线程可以操作这个资源，其他线程只能等待：
 
-```mipsasm
+```python
 import threading
 
 balance = 0
@@ -64,7 +72,7 @@ print(balance)
 
 从实际开发角度看，与线程相比，这种主动让出型的调度方式更为高效。一方面，它让调用者自己来决定什么时候让出，比操作系统的抢占式调度所需要的时间代价要小很多。后者为了能恢复现场会在切换线程时保存相当多的状态，并且会非常频繁地进行切换。另一方面，协程本身可以做成用户态，每个协程的体积比线程要小得多，因此一个进程可以容纳数量相当可观的协程任务。
 
-```java
+```python
 import asyncio
 
 balance = 0
@@ -98,7 +106,7 @@ print(balance)
 
 回到并发竞争带来的安全问题上，既然同一时间只能有一个协程任务运行，并且协程切换并不是系统态抢占式，那么协程一定是安全的：
 
-```gauss
+```python
 import asyncio
 
 balance = 0
@@ -124,7 +132,7 @@ print(balance)
 
 运行结果：
 
-```crmsh
+```text
 0
 0
 0
@@ -179,20 +187,19 @@ print(balance)
 
 逻辑有了些许修改，当我对全局变量balance进行加法运算后，主动释放使用权，让别的协程运行，随后立刻切换回来，再进行减法运算，如此往复，同时开启四个协程任务，让我们来看一下代码运行结果：
 
-```avrasm
+```text
 17
 9
 7
 0
 0
-liuyue:mytornado liuyue$
 ```
 
 可以看到，协程运行过程中，并没有保证“状态一致”，也就是一旦通过await关键字切换协程，变量的状态并不会进行同步，从而导致执行过程中变量状态的“混乱状态”，但是所有协程执行完毕后，变量balance的最终结果是0，意味着协程操作变量的最终一致性是可以保证的。
 
 为了对比，我们再用多线程试一下同样的逻辑：
 
-```routeros
+```python
 import threading
 import time
 
@@ -223,8 +230,7 @@ print(balance)
 
 多线程逻辑执行结果：
 
-```avrasm
-liuyue:mytornado liuyue$ python3 "/Users/liuyue/wodfan/work/mytornado/test.py"
+```text
 28
 18
 10
@@ -268,8 +274,7 @@ print(balance)
 
 协程加锁执行后结果：
 
-```avrasm
-liuyue:mytornado liuyue$ python3 "/Users/liuyue/wodfan/work/mytornado/test.py"
+```text
 0
 0
 0

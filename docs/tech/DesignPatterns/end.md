@@ -3,7 +3,7 @@ title: 结语
 date: 2024-10-29
 category:
   - 设计模式
-tag:
+tags:
   - 设计模式
   - TypeScript
 prev: ./interpreter

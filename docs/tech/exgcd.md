@@ -1,4 +1,11 @@
-# GCD、EXGCD
+---
+title: GCD 与 EXGCD 算法
+date: 2025-03-01
+category: ["算法"]
+tags: ["数学", "GCD", "EXGCD", "数论", "逆元"]
+---
+
+# GCD、EXGCD 与费马小定理
 
 ## GCD
 $gcd(a,b)=gcd(b,a\%b)$

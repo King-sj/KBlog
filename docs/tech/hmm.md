@@ -1,5 +1,15 @@
+---
+title: HMM 词性标注
+date: 2025-06-01
+category: ["NLP"]
+tags: ["HMM", "词性标注", "NLP", "Python", "维特比算法"]
+---
+
 # HMM 词性标注
-```py
+
+基于隐马尔可夫模型（HMM）和维特比算法实现中文词性标注，使用 jieba 分词作为辅助。
+
+```python
 import jieba
 from collections import defaultdict, Counter
 
@@ -102,5 +112,5 @@ print(f"分词结果: {observations}")
 print(f"最优路径概率: {prob}")
 print(f"词性标注: {pos_tags}")
 ```
-### 运行结果
+## 运行结果
 ![alt text](image-2.png)

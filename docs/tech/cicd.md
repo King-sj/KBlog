@@ -3,7 +3,7 @@ title: CI/CD
 date: 2024-08-02
 category:
   - CI/CD
-tag:
+tags:
   - CI/CD
 ---
 

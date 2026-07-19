@@ -1,3 +1,10 @@
+---
+title: 翻转链表
+date: 2025-03-01
+category: ["算法"]
+tags: ["链表", "牛客", "C++"]
+---
+
 # 翻转链表
 
 https://www.nowcoder.com/share/jump/8561783581740796593241

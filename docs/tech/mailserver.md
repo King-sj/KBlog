@@ -1,7 +1,11 @@
 ---
+title: 自建 mail server
 date: 2024-11-01
-title: 自建mail server
+category: ["运维"]
+tags: ["mailserver", "docker", "smtp", "self-hosted"]
 ---
+
+# 自建 mail server
 
 参见:
 

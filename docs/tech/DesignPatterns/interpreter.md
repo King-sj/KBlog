@@ -3,7 +3,7 @@ title: Interpreter 模式
 date: 2024-10-29
 category:
   - 设计模式
-tag:
+tags:
   - 设计模式
   - TypeScript
   - 用类实现

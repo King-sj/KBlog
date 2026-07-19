@@ -1,14 +1,32 @@
 ---
 icon: circle-info
 archive: true
-sticky : true
+sticky: true
 home: true
 portfolio: true
-titles: student
+title: 关于我
 date: 2023-07-08
 ---
 
-# 介绍页
+# 关于我
 
-一位热衷于探索全栈开发领域的技术爱好者，擅长将前端与后端技术无缝结合，致力于打造高效、优雅的解决方案。
+北邮本科毕业，目前在做游戏开发。平时写博客记录踩坑笔记和技术备忘，Talking is cheap, show me the code.
+
+## 技术栈
+
+全栈偏后端，啥都摸过一点，主要用 Python / C++ / TypeScript / Go。
+
+## 毕业词
+
+本科毕业时填的一首《浪淘沙》：
+
+> 把酒送西风，前路从容。蓟门槐影北城东。
+> 昔日书窗相伴处，开满芳丛。
+>
+> 一别太匆匆，心事难穷。京华春尽落残红。
+> 他日钱塘山水秀，再觅谁同？
+
+## 联系我
+
+- GitHub: [@king-sj](https://github.com/king-sj)
 

@@ -1,3 +1,10 @@
+---
+title: Python asyncio
+date: 2025-06-01
+category: ["Python"]
+tags: ["python", "asyncio", "异步", "并发"]
+---
+
 # Python asyncio
 
 `asyncio` 是 Python 用于编写并发代码的库。它使用 `async`/`await` 语法，使得编写异步程序变得更加直观和简单。`asyncio` 主要用于 I/O 绑定和高层次结构化网络代码。

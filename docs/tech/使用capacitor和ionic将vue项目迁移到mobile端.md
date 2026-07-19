@@ -1,6 +1,6 @@
 ---
 title: 使用capacitor和ionic将vue项目迁移到mobile端
-tag:
+tags:
   - mobile
 ---
 

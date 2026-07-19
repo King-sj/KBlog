@@ -3,7 +3,7 @@ title: Observer 模式
 date: 2024-10-26
 category:
   - 设计模式
-tag:
+tags:
   - 设计模式
   - TypeScript
   - 管理状态

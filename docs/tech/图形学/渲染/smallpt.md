@@ -1,4 +1,14 @@
+---
+title: smallpt - 全局光照路径追踪
+date: 2025-03-01
+category: ["图形学"]
+tags: ["全局光照", "路径追踪", "C++", "光线追踪"]
+---
+
 # smallpt
+
+smallpt 是一个 99 行的全局光照渲染器，使用路径追踪算法。
+
 ```cpp
 #include <math.h>
 #include <stdlib.h>
