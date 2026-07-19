@@ -4,6 +4,13 @@
   "description": "个人技术分享",
   "license": "MIT",
   "type": "module",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "vue-demi"
+    ]
+  },
   "scripts": {
     "blog:build": "vuepress build docs",
     "blog:clean-dev": "vuepress dev docs --clean-cache",
