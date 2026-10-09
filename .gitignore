@@ -10,3 +10,6 @@ node_modules/
 .secrets
 temp
 tmp
+
+# 本地专用分区，不上传/不参与 CI/CD
+docs/secret-netease/
